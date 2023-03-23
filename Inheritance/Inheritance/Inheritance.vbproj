@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Inheritance</RootNamespace>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.vb" />
+    <Compile Remove="EmployeeDetail.vb" />
+    <Compile Remove="Program.vb" />
+  </ItemGroup>
+
+</Project>

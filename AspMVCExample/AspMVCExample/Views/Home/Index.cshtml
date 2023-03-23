@@ -1,0 +1,13 @@
+﻿@model WebApplication3.Models.Employee
+@using (Html.BeginForm())
+{
+	<div>
+		@Html.DisplayNameFor(s => s.employeeID)*:@Html.TextBoxFor(s => s.employeeID)
+		<br>
+		@Html.ValidationMessageFor(s => s.employeeID)
+	</div>
+	<div>
+		<input type="submit" value="submit" />
+	</div>
+	@Html.ValidationSummary(true)
+}

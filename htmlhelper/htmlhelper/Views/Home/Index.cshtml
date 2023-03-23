@@ -1,0 +1,56 @@
+﻿@model Interview
+
+<h2>Registration Form</h2>
+<div class="container">
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td>@Html.Label("Full Name")</td>
+                <td>@Html.TextBoxFor(m => m.name)</td>
+                @Html.ValidationMessageFor(m => m.name)
+            </tr>
+            <tr>
+                <td>@Html.Label("Date of Birth")</td>
+                <td>@Html.TextBoxFor(m => m.dob)</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+
+                    @Html.DropDownListFor(m => m.Gender,
+                new SelectList(Enum.GetValues(typeof(Gender))),
+                "Select Gender") 
+                  
+                </td>
+            </tr>
+            <tr>
+                <td>JobRole</td>
+                <td>
+                    @Html.CheckBoxFor(m => m.jobrole,true) Programmer Analyst
+                    @Html.CheckBoxFor(m => m.jobrole) Software Engineer
+                    @Html.CheckBoxFor(m => m.jobrole)  System Engineer
+                </td>
+            </tr>
+
+            <tr>
+                <td>@Html.Label("Address")</td>
+                <td>@Html.TextBoxFor(m => m.address)</td>
+            </tr>
+            <td>
+            <tr>
+                <td>@Html.Label("District")</td>
+                <td>@Html.TextBoxFor(m => m.District)</td>
+            </tr>
+            <td>
+            <tr>
+                <td>@Html.Label("Pincode")</td>
+                <td>@Html.TextBoxFor(m => m.pincode)</td>
+            </tr>
+            <td>
+                <input type="submit" value="Submit" class="btn-primary">
+            </td>
+        </table>
+    }
+
+</div>

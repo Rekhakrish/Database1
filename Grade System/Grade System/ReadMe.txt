@@ -1,0 +1,1 @@
+﻿Write a program to display the grade obtained by the child according to the marks obtained by him/her.If marks are>=90 –  Grade is A<90 and >80 – Grade is B<80 and >=70 – Grade is C<70 and >=60 – Grade is D<60 – Grade is E1.Create a method name student2.Create a class marks contains student name, age , sub,sub marks and total
